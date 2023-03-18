@@ -1,14 +1,22 @@
 import React from "react";
 
+
 export default function Navbar() {
-    // <nav className="navbar" style={{backgroundColor: "#e3f2fd"}}>
+//   <li>
+//   <a className="dropdown-item" href="/">
+//     one
+//   </a>
+// </li>
+
+
+    let classSub = ["one","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten"];
   return (
     <>
    
       <nav className="navbar navbar-expand-lg " style={{backgroundColor: "#e3f2fd"}}>
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
-            Navbar
+            Education_hub....
           </a>
           <button
             className="navbar-toggler"
@@ -23,14 +31,10 @@ export default function Navbar() {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
-                  Home
-                </a>
-              </li>
+              
               <li className="nav-item">
                 <a className="nav-link" href="/">
-                  Link
+                  Student Log_In
                 </a>
               </li>
               <li className="nav-item dropdown">
@@ -41,27 +45,16 @@ export default function Navbar() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Dropdown
+                  Study material
                 </a>
                 <ul className="dropdown-menu">
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Action
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Something else here
-                    </a>
-                  </li>
+                   {classSub.map((sub,idx)=>{
+                    return(
+                      <li key={idx}>
+                        <a className="dropdown-item" href="/">{sub}</a>
+                      </li>
+                    )
+                   })}
                 </ul>
               </li>
               <li className="nav-item">

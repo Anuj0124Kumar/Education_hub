@@ -9,6 +9,21 @@ export default function Education() {
         <div className="col-md-4">
           <EducationItem />
         </div>
+        <div className="col-md-4">
+          <EducationItem />
+        </div>
+        <div className="col-md-4">
+          <EducationItem />
+        </div>
+        <div className="col-md-4">
+          <EducationItem />
+        </div>
+        <div className="col-md-4">
+          <EducationItem />
+        </div>
+        <div className="col-md-4">
+          <EducationItem />
+        </div>
       </div>
     </div>
     </>
