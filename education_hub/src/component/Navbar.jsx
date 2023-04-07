@@ -1,19 +1,25 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
-//   <li>
-//   <a className="dropdown-item" href="/">
-//     one
-//   </a>
-// </li>
-
-
-    let classSub = ["one","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten"];
+  let classSub = [
+    "one",
+    "Two",
+    "Three",
+    "Four",
+    "Five",
+    "Six",
+    "Seven",
+    "Eight",
+    "Nine",
+    "Ten",
+  ];
   return (
     <>
-   
-      <nav className="navbar navbar-expand-lg " style={{backgroundColor: "#e3f2fd"}}>
+      <nav
+        className="navbar navbar-expand-lg "
+        style={{ backgroundColor: "#e3f2fd" }}
+      >
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
             Education_hub....
@@ -29,17 +35,21 @@ export default function Navbar() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              
+          <div className="collapse navbar-collapse  " id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
               <li className="nav-item">
-                <a className="nav-link" href="/">
+                <a className="nav-link mx-3" href="/">
                   Student Log_In
                 </a>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link mx-3" to="/book_search">
+                  Book Search
+                </Link>
+              </li>
               <li className="nav-item dropdown">
                 <a
-                  className="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle mx-3"
                   href="/"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -48,17 +58,16 @@ export default function Navbar() {
                   Study material
                 </a>
                 <ul className="dropdown-menu">
-                   {classSub.map((sub,idx)=>{
-                    return(
+                  {classSub.map((sub, idx) => {
+                    return (
                       <li key={idx}>
-                        <a className="dropdown-item" href="/">{sub}</a>
+                        <a className="dropdown-item" href="/">
+                          {sub}
+                        </a>
                       </li>
-                    )
-                   })}
+                    );
+                  })}
                 </ul>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link disabled">Disabled</a>
               </li>
             </ul>
             <form className="d-flex" role="search">
@@ -74,8 +83,7 @@ export default function Navbar() {
             </form>
           </div>
         </div>
-      
-    </nav>
+      </nav>
     </>
   );
 }

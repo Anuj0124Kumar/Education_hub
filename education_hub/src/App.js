@@ -1,14 +1,17 @@
 
 import './App.css';
-import Education from './component/Education';
-import Navbar from './component/Navbar';
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import Home from './pages/Home';
+import Booksearch from './pages/Booksearch';
 
 function App() {
   return (
-    <div>
-         <Navbar/>
-         <Education/>
-    </div>
+    <BrowserRouter>
+         <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/book_search" element={<Booksearch/>} />
+         </Routes>
+    </BrowserRouter>
   );
 }
 
